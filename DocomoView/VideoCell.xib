@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VideoCell" customModule="DocomoView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="287" height="164"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="287" height="164"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVa-93-wuB">
+                        <rect key="frame" x="0.0" y="0.0" width="287" height="164"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOe-ZZ-b5K">
+                                <rect key="frame" x="0.0" y="0.0" width="287" height="171"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="video_image" title=""/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kOe-ZZ-b5K" firstAttribute="top" secondItem="mVa-93-wuB" secondAttribute="top" id="eVx-FU-hh9"/>
+                            <constraint firstAttribute="trailing" secondItem="kOe-ZZ-b5K" secondAttribute="trailing" id="f7E-ps-vjH"/>
+                            <constraint firstItem="kOe-ZZ-b5K" firstAttribute="leading" secondItem="mVa-93-wuB" secondAttribute="leading" id="fke-hj-nlF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mVa-93-wuB" secondAttribute="trailing" id="7jy-t4-jjH"/>
+                <constraint firstItem="mVa-93-wuB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="K4B-Wo-YgS"/>
+                <constraint firstAttribute="bottom" secondItem="mVa-93-wuB" secondAttribute="bottom" id="qSs-YF-1a6"/>
+                <constraint firstItem="mVa-93-wuB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xBw-Vc-VMe"/>
+            </constraints>
+            <size key="customSize" width="287" height="164"/>
+            <connections>
+                <outlet property="videoButton" destination="kOe-ZZ-b5K" id="0W9-cH-5uk"/>
+            </connections>
+            <point key="canvasLocation" x="-477.536231884058" y="59.598214285714285"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="video_image" width="283" height="157"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HorizontalCollectionCell" customModule="DocomoView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="171"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="171"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DeD-wW-AOi">
+                        <rect key="frame" x="0.0" y="0.0" width="356" height="171"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fDx-Er-Qvp">
+                                <rect key="frame" x="0.0" y="0.0" width="356" height="171"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YZ8-NM-wSD">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2AG-oL-wvc">
+                                <rect key="frame" x="0.0" y="0.0" width="356" height="171"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="spM-Uf-R26">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fDx-Er-Qvp" secondAttribute="bottom" id="1mn-fP-z2K"/>
+                            <constraint firstAttribute="bottom" secondItem="2AG-oL-wvc" secondAttribute="bottom" id="HgD-Ge-BHu"/>
+                            <constraint firstItem="fDx-Er-Qvp" firstAttribute="leading" secondItem="DeD-wW-AOi" secondAttribute="leading" id="JsX-B6-17x"/>
+                            <constraint firstAttribute="trailing" secondItem="fDx-Er-Qvp" secondAttribute="trailing" id="OQP-Dj-UyL"/>
+                            <constraint firstItem="2AG-oL-wvc" firstAttribute="leading" secondItem="DeD-wW-AOi" secondAttribute="leading" id="Vlq-Qs-UNu"/>
+                            <constraint firstItem="2AG-oL-wvc" firstAttribute="top" secondItem="DeD-wW-AOi" secondAttribute="top" id="YRf-Jp-OGv"/>
+                            <constraint firstItem="fDx-Er-Qvp" firstAttribute="top" secondItem="DeD-wW-AOi" secondAttribute="top" id="gHy-fX-U2o"/>
+                            <constraint firstAttribute="trailing" secondItem="2AG-oL-wvc" secondAttribute="trailing" id="hjg-Gl-41H"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="DeD-wW-AOi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7Ln-Rr-2B9"/>
+                <constraint firstAttribute="trailing" secondItem="DeD-wW-AOi" secondAttribute="trailing" id="B4N-xv-VU4"/>
+                <constraint firstItem="DeD-wW-AOi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JMz-a8-E6e"/>
+                <constraint firstAttribute="bottom" secondItem="DeD-wW-AOi" secondAttribute="bottom" id="n5w-5f-P7H"/>
+            </constraints>
+            <connections>
+                <outlet property="horizontalCollection" destination="2AG-oL-wvc" id="wWC-Qq-LWG"/>
+            </connections>
+            <point key="canvasLocation" x="-14" y="64"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

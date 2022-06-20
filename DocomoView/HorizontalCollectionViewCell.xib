@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HorizontalCollectionViewCell" customModule="DocomoView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2c-Mk-CTS">
+                        <rect key="frame" x="0.0" y="0.0" width="356" height="200"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tAw-YC-vxx">
+                                <rect key="frame" x="0.0" y="0.0" width="356" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fVJ-xP-GEl">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDa-nr-0JG">
+                                <rect key="frame" x="311" y="84.5" width="45" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.circle.fill" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="nextButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="vx4-Ik-Zv5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5z5-Wu-hYG">
+                                <rect key="frame" x="0.0" y="84.5" width="45" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.circle.fill" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="backButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="1Ao-tx-dge"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5z5-Wu-hYG" firstAttribute="centerY" secondItem="y2c-Mk-CTS" secondAttribute="centerY" id="4Gu-AB-SRI"/>
+                            <constraint firstAttribute="trailing" secondItem="uDa-nr-0JG" secondAttribute="trailing" id="9Hh-qj-xbJ"/>
+                            <constraint firstAttribute="bottom" secondItem="tAw-YC-vxx" secondAttribute="bottom" id="BR6-PR-nrh"/>
+                            <constraint firstItem="uDa-nr-0JG" firstAttribute="centerY" secondItem="y2c-Mk-CTS" secondAttribute="centerY" id="G3Q-xX-ApW"/>
+                            <constraint firstAttribute="trailing" secondItem="tAw-YC-vxx" secondAttribute="trailing" id="LQz-PD-Lp1"/>
+                            <constraint firstItem="5z5-Wu-hYG" firstAttribute="leading" secondItem="y2c-Mk-CTS" secondAttribute="leading" id="OOn-Ff-xBL"/>
+                            <constraint firstItem="tAw-YC-vxx" firstAttribute="leading" secondItem="y2c-Mk-CTS" secondAttribute="leading" id="Vo2-gU-NVH"/>
+                            <constraint firstItem="tAw-YC-vxx" firstAttribute="top" secondItem="y2c-Mk-CTS" secondAttribute="top" id="nfX-oQ-LpZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="y2c-Mk-CTS" secondAttribute="bottom" id="561-QZ-Jdh"/>
+                <constraint firstItem="y2c-Mk-CTS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8Iq-lV-EpC"/>
+                <constraint firstAttribute="trailing" secondItem="y2c-Mk-CTS" secondAttribute="trailing" id="96J-Mz-mkq"/>
+                <constraint firstItem="y2c-Mk-CTS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="X3F-h7-RFq"/>
+            </constraints>
+            <size key="customSize" width="356" height="171"/>
+            <connections>
+                <outlet property="horizontalCollectionView" destination="tAw-YC-vxx" id="vvi-Iy-DX1"/>
+            </connections>
+            <point key="canvasLocation" x="179.71014492753625" y="45.870535714285715"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
